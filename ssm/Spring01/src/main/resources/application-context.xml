@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd">
+    <!-- 此处配置类 -->
+    <bean id ="accountSetviseImpl" class="com.tong.service.impl.AccountServiceImpl">
+
+    </bean>
+    <bean id="rectangle" class="com.tong.Rectangle">
+        <constructor-arg name="width" value="10"/>
+        <constructor-arg name="height" value="20"/>
+    </bean>
+    <bean id="triangle" class="com.tong.Triangle">
+        <constructor-arg name="a" value="10"/>
+        <constructor-arg name="b" value="24"/>
+        <constructor-arg name="c" value="30"/>
+    </bean>
+    <bean id="shapeCompute" class="com.tong.XmlShapeCompute">
+        <property name="rectangle" ref="rectangle"/>
+        <property name="triangle" ref="triangle"/>
+    </bean>
+</beans>

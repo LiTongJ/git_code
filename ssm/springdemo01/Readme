@@ -1,0 +1,5 @@
+spring step 1: (IOC)
+  1, add jar file to projects (POM.xml)
+  2, add to the file which from spring core config file. ----> applicationContext.xml
+  3, get bean object
+  4, test application
